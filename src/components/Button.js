@@ -1,7 +1,8 @@
-import React from 'react'
+const Button = () => {
 
-function Button() {
-  return <button>Click Me</button>
+  return (
+    <button>Click Me</button>
+  )
 }
 
 export default Button

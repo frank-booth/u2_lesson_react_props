@@ -4,13 +4,14 @@
 
 ## Overview
 
-In this lesson, we'll learn how to utilize `properties` or `props` for short to create reusable elements in React. `Props` allow our components to change dymanically based on information that we provide in a quite familiar syntax!
+In this lesson, we'll learn how to utilize `properties` or `props` for short to create reusable elements in React. `Props` allow our components to change dynamically based on information that we provide in a quite familiar syntax!
 
 ## Getting Started
 
-- Fork and Clone
-- `npm install`
-- `npm start`
+- `Fork` and `Clone`
+- `cd` into the newly created directory
+- `npm install` to install our dependencies
+- `npm start` to spin up our app
 
 ## What are `props`?
 
@@ -25,10 +26,6 @@ In short, `props` are pieces of information that we can provide to any component
 ## Prop Syntax
 
 `Props` follow a very simple convention:
-
-
-
-
 
 ![Imgur](https://i.imgur.com/ecnlcXv.jpeg)
 
@@ -61,7 +58,6 @@ Here's where things get interesting, provide a `prop` to the `Button` component 
 
 Take a look at your browser you should see the following:
 
-
 ![Imgur](https://i.imgur.com/6rOfK6K.jpeg)
 
 Hmm interesting... It looks like our button is still showing click me. Let's see why!
@@ -71,8 +67,11 @@ Open the `Button.js` file located in the `components` folder, you should see the
 ```jsx
 import React from 'react'
 
-function Button() {
-  return <button>Click Me</button>
+const Button = () => {
+
+  return (
+    <button>Click Me</button>
+  )
 }
 
 export default Button
@@ -83,10 +82,11 @@ Well this looks like a basic button, theres nothing special here! Let's change t
 In order for a component to have the ability to read `props`, we must tell the component to be aware of them. To accomplish this, add `props` to the `Button` function as an argument:
 
 ```js
-import React from 'react'
+const Button = (props) => {
 
-function Button(props) {
-  return <button>Click Me</button>
+  return (
+    <button>Click Me</button>
+  )
 }
 
 export default Button
@@ -95,11 +95,12 @@ export default Button
 Let's add a `console.log` to see what exactly is `props`:
 
 ```jsx
-import React from 'react'
-
-function Button(props) {
+const Button = (props) => {
   console.log(props)
-  return <button>Click Me</button>
+
+  return (
+    <button>Click Me</button>
+  )
 }
 
 export default Button
@@ -120,11 +121,12 @@ So if `props` is an object, how can we access the information we provided? Let's
 In `Button.js`, let's replace the current button text of `Click Me` with `{props.text}`:
 
 ```jsx
-import React from 'react'
-
-function Button(props) {
+const Button = (props) => {
   console.log(props)
-  return <button>{props.text}</button>
+
+  return (
+    <button>{props.text}</button>
+  )
 }
 
 export default Button
@@ -183,11 +185,12 @@ In both of these scenarios, the `${}` syntax came in handy to pass `variables` i
 In the provided `Button.js` example, we had the following code:
 
 ```jsx
-import React from 'react'
-
-function Button(props) {
+const Button = (props) => {
   console.log(props)
-  return <button>{props.text}</button>
+
+  return (
+    <button>{props.text}</button>
+  )
 }
 
 export default Button
@@ -203,8 +206,10 @@ In your `App.js`, create a variable of `buttonText` with a value of `"Awesome Bu
 ```jsx
 import './App.css'
 import Button from './components/Button'
-function App() {
+
+const App = () => {
   const buttonText = 'Awesome Button'
+
   return (
     <div>
       <Button text="Awesome Button" />
@@ -220,8 +225,10 @@ Next let's substitute the `text` value currently being passed to our `Button` co
 ```js
 import './App.css'
 import Button from './components/Button'
-function App() {
+
+const App = () => {
   const buttonText = 'Awesome Button'
+
   return (
     <div>
       <Button text={buttonText} />
@@ -243,7 +250,8 @@ In your `App.js`, let's define a function called `alertUser` that set's an `aler
 ```jsx
 import './App.css'
 import Button from './components/Button'
-function App() {
+
+const App = () => {
   const buttonText = 'Awesome Button'
 
   const alertUser = () => {
@@ -265,7 +273,8 @@ Next let's pass this function to our `Button` component with a prop name of `han
 ```jsx
 import './App.css'
 import Button from './components/Button'
-function App() {
+
+const App = () => {
   const buttonText = 'Awesome Button'
 
   const alertUser = () => {
@@ -285,11 +294,12 @@ export default App
 Finally, let's access the `handleClick` prop from `Button.js` and set it to an `onClick` attribute for our button:
 
 ```jsx
-import React from 'react'
-
-function Button(props) {
+const Button = (props) => {
   console.log(props)
-  return <button onClick={props.handleClick}>{props.text}</button>
+
+  return (
+    <button onClick={props.handleClick}>{props.text}</button>
+  )
 }
 
 export default Button
