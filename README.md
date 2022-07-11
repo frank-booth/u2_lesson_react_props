@@ -26,12 +26,10 @@ In short, `props` are pieces of information that we can provide to any component
 
 `Props` follow a very simple convention:
 
-<div>
-    <img src="https://sei-r.s3.amazonaws.com/u2_lesson_react_props/prop-structure.png" style="height:250px;" alt="prop structure"/>
-</div>
+
 
 <div>
-    <img src="https://sei-r.s3.amazonaws.com/u2_lesson_react_props/prop-variable.png" style="height:250px;" alt="prop with variable"/>
+    <img src="https://imgur.com/a/5wO6nru" style="height:250px;" alt="prop with variable"/>
 </div>
 
 The name of the prop, is defined very similarly to an HTML attribute. We can set the value a couple of different ways:
@@ -64,7 +62,7 @@ Here's where things get interesting, provide a `prop` to the `Button` component 
 Take a look at your browser you should see the following:
 
 <div>
-<img src="https://sei-r.s3.amazonaws.com/u2_lesson_react_props/button-no-prop.png" alt="button-no-prop"/>
+<img src="https://imgur.com/gallery/LupVH2d" alt="button-no-prop"/>
 </div>
 
 Hmm interesting... It looks like our button is still showing click me. Let's see why!
@@ -108,11 +106,8 @@ function Button(props) {
 export default Button
 ```
 
-You should see the following in your console:
+Now let's look in our console.
 
-<div>
-    <img src="https://sei-r.s3.amazonaws.com/u2_lesson_react_props/button-props-log.png" alt="button-props-log"/>
-</div>
 
 Let's talk about what happened here:
 
@@ -136,11 +131,9 @@ function Button(props) {
 export default Button
 ```
 
-Take a look at your browser and notice what the text inside of the button contains:
+Take a look at your browser and notice what the text inside of the button contains.
 
-<div>
-    <img src="https://sei-r.s3.amazonaws.com/u2_lesson_react_props/button-with-props.png" alt="button-with-props"/>
-</div>
+
 
 We'll talk about what role the `{}` syntax has in React in the next section.
 
