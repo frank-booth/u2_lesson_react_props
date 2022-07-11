@@ -28,9 +28,9 @@ In short, `props` are pieces of information that we can provide to any component
 
 
 
-<div>
-    <img src="https://imgur.com/a/5wO6nru" style="height:250px;" alt="prop with variable"/>
-</div>
+
+
+![Imgur](https://i.imgur.com/ecnlcXv.jpeg)
 
 The name of the prop, is defined very similarly to an HTML attribute. We can set the value a couple of different ways:
 
@@ -61,9 +61,8 @@ Here's where things get interesting, provide a `prop` to the `Button` component 
 
 Take a look at your browser you should see the following:
 
-<div>
-<img src="https://imgur.com/gallery/LupVH2d" alt="button-no-prop"/>
-</div>
+
+![Imgur](https://i.imgur.com/6rOfK6K.jpeg)
 
 Hmm interesting... It looks like our button is still showing click me. Let's see why!
 
