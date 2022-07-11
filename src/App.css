@@ -1,8 +1,55 @@
-button {
-  background-color: coral;
-  height: 100px;
-  width: 300px;
-  border: 0;
-  margin: 1em;
-  cursor: pointer;
+.body {
+  background-color: #292C34;
+  background-size: cover;
+
+}
+
+
+h1 {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  padding: 10px;
+}
+
+img {
+  height: 150px;
+  width: 100px;
+
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  /* flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center; */
+  color:antiquewhite;
+ 
+}
+
+.fellowship-container {
+  background-color: #314531;
+  text-align: center;
+  margin-right: 10px;
+  width: 200px;
+  height: 250px;
+} 
+
+.towers-container {
+  background-color: #65302E;
+  text-align: center; 
+  margin-right: 10px;
+  width: 200px;
+  height: 250px;
+}
+
+.king-container {
+  background-color:#2D2E57;
+  text-align: center;
+  width: 200px;
+  height: 250px;
 }
